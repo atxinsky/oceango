@@ -1107,6 +1107,10 @@ p {
     border-radius: var(--border-radius-lg);
     transition: var(--transition);
     filter: brightness(1.1);
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
 }
 
 .solution-image img:hover {
@@ -1122,7 +1126,17 @@ p {
 /* Hero Background Enhancement */
 .hero-background {
     background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
+    background-attachment: fixed;
+}
+
+/* Responsive background image adjustments */
+@media (max-width: 768px) {
+    .hero-background {
+        background-attachment: scroll;
+        background-size: cover !important;
+        background-position: center center !important;
+    }
 }
 
 /* Global Trade Theme */
